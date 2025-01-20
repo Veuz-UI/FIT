@@ -205,6 +205,9 @@
         <div class="wheel__card">
           <img src="assets/img/slider-5.png" />
         </div>
+        <div class="wheel__card">
+          <img src="assets/img/slider-5.png" />
+        </div>
 
         <div class="wheel__card">
           <img src="assets/img/slider-1.png" />
@@ -217,6 +220,9 @@
         </div>
         <div class="wheel__card">
           <img src="assets/img/slider-4.png" />
+        </div>
+        <div class="wheel__card">
+          <img src="assets/img/slider-5.png" />
         </div>
         <div class="wheel__card">
           <img src="assets/img/slider-5.png" />
@@ -259,7 +265,7 @@
         <div class="row justify-content-center">
           <div class="col-lg-4 col-md-6">
             <div class="dwc-section-box" data-aos="fade-up" data-aos-duration="1000">
-              <img src="assets/img/design.svg" alt="">
+              <img src="assets/img/design.gif" alt="">
               <h5>Designs</h5>
               <p>Design that innovates</p>
             </div>
@@ -267,7 +273,7 @@
 
           <div class="col-lg-4 col-md-6">
             <div class="dwc-section-box" data-aos="fade-up" data-aos-duration="2000">
-              <img src="assets/img/words.svg" alt="">
+              <img src="assets/img/words.gif" alt="">
               <h5>Words</h5>
               <p>We bring words to life</p>
             </div>
@@ -275,7 +281,7 @@
 
           <div class="col-lg-4 col-md-6">
             <div class="dwc-section-box" data-aos="fade-up" data-aos-duration="3000">
-              <img src="assets/img/codes.svg" alt="">
+              <img src="assets/img/codes.gif" alt="">
               <h5>Codes</h5>
               <p>We code the future</p>
             </div>
@@ -296,8 +302,8 @@
         <div class="col-lg-7">
           <div class="section-title text-wrapper">
             <h4>ABOUT US</h4>
-            <h2 class="scroll-fill"><span>Software Development <br>
-                Company in <span class="color-yellow"> Bahrain</span></span></h2>
+            <h2 class="reveal-type" data-bg-color="#ffffff1c" data-fg-color="#fff">Software Development <br>
+              Company in Bahrain</h2>
           </div>
           <p class="main-para">As a leading software development company operating in Bahrain and India,
             we offer an array of services tailored to enhance your business. From
@@ -348,7 +354,6 @@
               <img src="assets/img/logos/cl-5.png" alt="">
             </div>
           </div>
-
           <div class="col">
             <div class="logo-box logo-box-st">
               <img src="assets/img/logos/cl-5.png" alt="">
@@ -391,8 +396,8 @@
         </div>
         <div class="col-lg-4">
           <div class="section-title text-wrapper-2">
-            <h2 class="scroll-fill"><span>Why Choose
-                <span class="color-yellow"> Us ?</span></span></h2>
+            <h2 class="reveal-type" data-bg-color="#ffffff1c" data-fg-color="#fff">Why Choose Us
+              </h2>
           </div>
           <p class="main-para">Over a decade of experience with thousands of
             Satisfied customers. Our agile teams are dedicated
@@ -448,9 +453,8 @@
           <div class="fixed-heading">
             <div class="section-title text-wrapper-3">
               <h4>Services</h4>
-              <h2 class="scroll-fill"><span>FIT SOLUTIONS is <br>
-                  a design and development <br>
-                  firm in <span class="color-yellow">Bahrain</span></span></h2>
+                  <h2 class="reveal-type" data-bg-color="#ffffff1c" data-fg-color="#fff">FIT SOLUTIONS is
+                    a design and development firm in Bahrain</h2>
             </div>
             <p class="main-para">FIT SOLUTIONS is a design and development firm in Bahrain, with service
               centers in India. Our team consists of passionate designers and developers
@@ -461,7 +465,8 @@
           </div>
         </div>
         <div class="col-lg-6 col-md-7">
-          <div class="service-box">
+          
+ <div class="service-box">
             <div class="serv-box-left">
               <div class="serv-img">
                 <img src="assets/img/service/serv-1.png" alt="">
@@ -485,8 +490,6 @@
               </div>
             </a>
           </div>
-
-
           <div class="service-box">
             <div class="serv-box-left">
               <div class="serv-img">
@@ -512,8 +515,6 @@
               </div>
             </a>
           </div>
-
-
           <div class="service-box">
             <div class="serv-box-left">
               <div class="serv-img">
@@ -575,8 +576,7 @@
     <div class="container">
       <div class="section-title section-title-center text-wrapper-4">
         <h4>Our Technologies</h4>
-        <h2 class="scroll-fill"><span>Incorporating advanced <br>
-            <span class="color-yellow"> Technologies.</span></span></h2>
+        <h2 class="reveal-type" data-bg-color="#ffffff1c" data-fg-color="#fff">Incorporating advanced <br> technologies.</h2>
         <p class="main-para">We offer a wide range of IT services and solutions in Bahrain to help you thrive in the
           digital era. Let's <br>
           merge our advanced technology and top-notch services for an exceptional customer experience.</p>
@@ -767,6 +767,7 @@
   <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js"></script>
   <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/split-type"></script>
   <script src="https://assets.codepen.io/16327/Flip.min.js"></script>
   <script src="https://unpkg.com/gsap@3/dist/MotionPathPlugin.min.js"></script>
   <script src="https://unpkg.com/gsap@3/dist/Draggable.min.js"></script>
@@ -798,95 +799,81 @@
   <script>
     gsap.registerPlugin(ScrollTrigger);
 
-    let wheel = document.querySelector(".wheel"),
-      images = gsap.utils.toArray(".wheel__card");
+let wheel = document.querySelector(".wheel"),
+  images = gsap.utils.toArray(".wheel__card");
 
-    function setup() {
-      let radius = wheel.offsetWidth / 2,
-        center = radius,
-        slice = 360 / images.length,
-        DEG2RAD = Math.PI / 180;
-      gsap.set(images, {
-        x: i => center + radius * Math.sin(i * slice * DEG2RAD),
-        y: i => center - radius * Math.cos(i * slice * DEG2RAD),
-        rotation: i => i * slice,
-        xPercent: -50,
-        yPercent: -50
-      });
-    }
+function setup() {
+  let radius = wheel.offsetWidth / 2,
+    center = radius,
+    slice = 360 / images.length,
+    DEG2RAD = Math.PI / 180;
+  gsap.set(images, {
+    x: i => center + radius * Math.sin(i * slice * DEG2RAD),
+    y: i => center - radius * Math.cos(i * slice * DEG2RAD),
+    rotation: i => i * slice,
+    xPercent: -50,
+    yPercent: -50
+  });
+}
 
-    setup();
+setup();
 
-    window.addEventListener("resize", setup);
+window.addEventListener("resize", setup);
 
-    // Rotate wheel on scroll
-    ScrollTrigger.create({
-      trigger: ".wheel", // Element to trigger the scroll animation
-      start: "top bottom", // Animation starts when wheel enters viewport
-      end: "bottom top", // Animation ends when wheel exits viewport
-      scrub: true, // Smooth scrolling effect
-      onUpdate: self => {
-        // Rotate the wheel based on scroll progress
-        gsap.to(wheel, {
-          rotation: -360 * self.progress, // Full rotation as scroll progresses
-          ease: "none",
-          overwrite: true, // Ensures only this animation controls the wheel
-        });
-      },
+// Rotate wheel on scroll
+ScrollTrigger.create({
+  trigger: ".wheel", 
+  start: "top bottom", 
+  end: "bottom top", 
+  scrub: 2, 
+  onUpdate: self => {
+    
+    gsap.to(wheel, {
+      rotation: -360 * self.progress, 
+      ease: "none",
+      overwrite: true, 
     });
+  },
+});
   </script>
 
   <script>
-    gsap.registerPlugin(ScrollTrigger);
+   
+   gsap.registerPlugin(ScrollTrigger)
 
-    // Target the span inside the heading
-    gsap.to('.scroll-fill span', {
-      transform: "translateX(0%)",
-      duration: 2,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: '.text-wrapper',
-        start: "top 80%",
-        end: "top 40%",
-        scrub: 1,
-      },
-    });
+const splitTypes = document.querySelectorAll('.reveal-type')
 
-    gsap.to('.scroll-fill span', {
-      transform: "translateX(0%)",
-      duration: 2,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: '.text-wrapper-2',
-        start: "top 80%",
-        end: "top 40%",
-        scrub: 1,
-      },
-    });
+splitTypes.forEach((char,i) => {
 
-    gsap.to('.scroll-fill span', {
-      transform: "translateX(0%)",
-      duration: 2,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: '.text-wrapper-3',
-        start: "top 80%",
-        end: "top 40%",
-        scrub: 1,
-      },
-    });
+    const bg = char.dataset.bgColor
+    const fg = char.dataset.fgColor
 
-    gsap.to('.scroll-fill span', {
-      transform: "translateX(0%)",
-      duration: 2,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: '.text-wrapper-4',
-        start: "top 80%",
-        end: "top 40%",
-        scrub: 1,
-      },
-    });
+    const text = new SplitType(char, { types: 'chars'})
+
+    gsap.fromTo(text.chars, 
+        {
+            color: bg,
+        },
+        {
+            color: fg,
+            duration: 0.3,
+            stagger: 0.02,
+            scrollTrigger: {
+                trigger: char,
+                start: 'top 90%',
+                end: 'bottom 40%',
+                scrub: true,
+                markers: false,
+                toggleActions: 'play play reverse reverse'
+            }
+    })
+})
+
+
+
+requestAnimationFrame(raf)
+
+
   </script>
 
   <script>

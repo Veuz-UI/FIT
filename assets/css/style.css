@@ -512,7 +512,7 @@ img {
   }
   .marquee-item-list {
     display: inline-flex;
-    padding: 10px 0px;
+    padding: 20px 0px;
     margin: 0;
 }
 
@@ -520,6 +520,7 @@ img {
   width: 100%;
   list-style: none;
   padding-right: 30px;
+  padding-left: 15px;
   font-size: 25px;
   color: var(--white-color);
   white-space: nowrap;
@@ -529,6 +530,10 @@ img {
 
   .marquee-item-list li span img{
 	width: 15px;
+  }
+
+  .marquee-item-list li span{
+	padding-left: 15px;
   }
   @keyframes marquee {
 	0% { transform: translateX(0); }
@@ -606,28 +611,19 @@ img {
     background: linear-gradient(90deg, #fbad1c 31.83%, #fff 58.88%, #1e1e1e 100%);
   }
   
-  .scroll-fill {
+  .section-title h2 {
 	font-size: 50px;
 	font-weight: bold;
 	position: relative;
 	display: inline-block;
   }
   
-  .scroll-fill span {
-	display: inline-block;
-	background: linear-gradient(to right, #fff, #fff);
-	-webkit-background-clip: text;
-	background-clip: text;
-	color: transparent;
-	transform: translateX(-100%); /* Start fully hidden */
-	white-space: nowrap;
-  }
+
 
   .main-para{
 	font-size: 18px;
 	color: var(--para-color);
 	font-weight: 300;
-	line-height: 38px;
   }
 
 /* about */
@@ -1458,7 +1454,7 @@ body.loaded {
 	.cleint-section {
 		padding: 100px 70px;
 	}
-	.scroll-fill{
+	.section-title h2{
 		font-size: 40px;
 	}
 }
@@ -1479,7 +1475,7 @@ body.loaded {
 		font-size: 16px;
 		line-height: 32px;
 	}
-	.scroll-fill {
+	.section-title h2 {
         font-size: 30px;
     }
 	.serv-box-right {
@@ -1587,7 +1583,7 @@ body.loaded {
 	.service-section {
 		padding: 0px 0px 20px 0px;
 	}
-	.scroll-fill {
+	.section-title h2 {
         font-size: 22px;
     }
 	.serv-img {
@@ -1827,4 +1823,7 @@ body.loaded {
 }
 
 /* <!-- ==================== End Responsive ==================== --> */
+
+  
+
 
