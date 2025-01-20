@@ -1629,10 +1629,10 @@ body.loaded {
         height: 500px;
     }
 	.banner {
-        height: 70vh;
+        height: 90vh;
     }
 	.nav-box{
-		margin-top: 5;
+		margin-top: 5px;
 	}
 	.marquee-first{
 		margin-top: 20px;
@@ -1640,12 +1640,16 @@ body.loaded {
 	.marquee-item-list li{
 		font-size: 20px;
 	}
+	.main-para{
+		font-size: 14px;
+		line-height: normal;
+	}
 }
 
 
 @media only screen and (max-width: 600px) {
 	.banner-text {
-		padding-top: 150px;
+		padding-top: 120px;
 	}
 	.logo-width {
 		width: 170px;
@@ -1654,10 +1658,11 @@ body.loaded {
         font-size: 30px;
     }
 	.banner-text p{
-		display: none;
+		font-size: 14px;
+
 	}
 	.wheel__card {
-		max-width: 250px;
+		max-width: 150px;
 		height: 150px;
 	}
 	.slider-section {
@@ -1730,10 +1735,10 @@ body.loaded {
 }
 
 @media only screen and (max-width: 500px) {
-	.wheel__card {
+	/* .wheel__card {
         max-width: 200px;
         height: 150px;
-    }
+    } */
 	.sr-rotating-2 {
         left: auto;
         right: -60px;
