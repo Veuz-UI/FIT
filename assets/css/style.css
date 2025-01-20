@@ -505,7 +505,7 @@ img {
 	position:relative;
 	display: flex;
 	width: 100%;  
-	animation-duration: 20s;
+	animation-duration: 10s;
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
 	justify-content: space-between;
@@ -1558,8 +1558,18 @@ body.loaded {
 		position: relative;
 		margin-top: 170px;
 	}
-	.banner-abstract{
+	/* .banner-abstract{
 		display: none;
+	} */
+	.banner-abstract {
+		position: relative;
+		bottom: auto;
+		margin-top: 250px;
+
+	}
+
+	.banner-abstract img {
+		width: 200px;
 	}
 	.about-st-img{
 		margin-bottom: 30px;
@@ -1728,6 +1738,9 @@ body.loaded {
 
 	.sm-show-btn{
 		display: block !important;
+	}
+	.loader-wrap .loader-wrap-heading .load-text {
+		font-size: 20px;
 	}
 
 	/* addjust */
