@@ -9,8 +9,7 @@ window.addEventListener('scroll', () => {
 });
 
 
-// to tob Button
-
+// to top Button
 
 
    // Show the button when the user scrolls down
@@ -30,6 +29,9 @@ window.addEventListener('scroll', () => {
       behavior: 'smooth'
     });
   };
+
+
+  // Register ScrollTrigger plugin
 
 
 
