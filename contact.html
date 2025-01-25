@@ -18,6 +18,13 @@
 </head>
 
 <body>
+
+
+  <!-- body cursor -->
+  <div class="cursor"></div>
+  <div class="cursor2"></div>
+  <!-- body cursor -->
+  
   <button id="toTopBtn">
     <img src="assets/img/arrow-right.svg" alt="">
   </button> 
@@ -55,62 +62,41 @@
         <div class="nsd-menu-overlay__content flex flex-wrap overflow-hidden nsd-menu-main">
           <div class="nsd-menu-overlay__content_part nsd-menu-overlay__content_part__left menu-ab-custom">
             <ul class="nsd-menu-fullscren">
-              <li class="fullscreen-single__item"><a href="index.html">Home</a></li>
+              <li class="fullscreen-single__item "><a href="index.html" >Home</a></li>
               <li class="fullscreen-single__item"><a href="about.html">About us</a></li>
               <li class="fullscreen-single__item has-sub menu-item-has-children">
-                <a href="#" class="__active">
+                <a href="javascript:void(0)">
                   <span>Services</span> <span class="menu-arrow"><i class="fa-solid fa-chevron-down"></i></span>
                 </a>
                 <ul class="sub-menu">
                   <li class="sub-menu__inner">
-                    <a href="">
-                      <span>submenu-1</span>
+                    <a href="service.html">
+                      <span>Website Development</span>
                     </a>
                   </li>
                   <li class="sub-menu__inner">
-                    <a href="">
-                      <span>submenu-2</span>
+                    <a href="service.html">
+                      <span>Aramco CCC+</span>
                     </a>
                   </li>
                   <li class="sub-menu__inner">
-                    <a href="">
-                      <span>submenu-3</span>
+                    <a href="service.html">
+                      <span>UI/UX Design</span>
                     </a>
                   </li>
                 </ul>
               </li>
-              <li class="fullscreen-single__item has-sub menu-item-has-children">
-                <a href="#">
-                  <span>Products</span><span class="menu-arrow"><i class="fa-solid fa-chevron-down"></i></span>
-                </a>
-                <ul class="sub-menu">
-                  <li class="sub-menu__inner">
-                    <a href="">
-                      <span>submenu-4</span>
-                    </a>
-                  </li>
-                  <li class="sub-menu__inner">
-                    <a href="">
-                      <span>submenu-5</span>
-                    </a>
-                  </li>
-                  <li class="sub-menu__inner">
-                    <a href="">
-                      <span>submenu-6</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="fullscreen-single__item"><a href="">Contacts</a></li>
+              <li class="fullscreen-single__item"><a class="__active" href="contact.html">Contacts</a></li>
             </ul>
 
             <div class="sm-show-btn">
               <div class="main-button">
                 <div class="main-button">
-                  <a href="#" class="button">
+                  <a href="enquiry.html" class="button">
                     <span class="button__spotlight"></span>
                     <span class="button__wrapper">
-                      <span class="button__text">Request a Quote <img src="assets/img/arrow-right.svg" alt="" class="button-arrow"></span>
+                      <span class="button__text">Request a Quote <img src="assets/img/arrow-right.svg" alt=""
+                          class="button-arrow"></span>
                     </span>
                   </a>
                 </div>
@@ -142,10 +128,11 @@
               </div>
 
               <div class="main-button">
-                <a href="#" class="button">
+                <a href="enquiry.html" class="button">
                   <span class="button__spotlight"></span>
                   <span class="button__wrapper">
-                    <span class="button__text">Request a Quote <img src="assets/img/arrow-right.svg" alt="" class="button-arrow"></span>
+                    <span class="button__text">Request a Quote <img src="assets/img/arrow-right.svg" alt=""
+                        class="button-arrow"></span>
                   </span>
                 </a>
               </div>
@@ -166,14 +153,13 @@
         <nav>
           <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="index.html">Home </a></li>
-              <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+              <li class="breadcrumb-item active" aria-current="page"> Enquiry</li>
           </ol>
       </nav>
        
 
       </div>
     </div>
-    
   </div>
 
   <section class="contact-main">
@@ -419,7 +405,7 @@
 
 
   <script src="assets/js/animation.js"></script>
-  <script src="assets/js/script.js"></script>
+  <!-- <script src="assets/js/script.js"></script> -->
   <script src="assets/js/aos.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
   <script src="assets/js/jquery.min.js"></script>
@@ -433,20 +419,66 @@
   <script src="assets/js/split-type.js"></script>
 
   <script>
-    gsap.registerPlugin(ScrollTrigger);
+        let cursor = document.querySelector(".cursor");
+    let cursor2 = document.querySelector(".cursor2");
+    let cursorScale = document.querySelectorAll(".cursor-scale");
+    let mouseX = 0;
+    let mouseY = 0;
 
-    gsap.to("#rotatingImage", {
-      scrollTrigger: {
-        trigger: ".image-container",
-        start: "top center",
-        end: "bottom center",
-        scrub: true,
-      },
-      rotation: 1080,
-      ease: "linear",
+    gsap.to({}, 0.016, {
+      repeat: -1,
+      onRepeat: function () {
+        gsap.set(cursor, {
+          css: {
+            left: mouseX,
+            top: mouseY
+          }
+        });
+        gsap.set(cursor2, {
+          css: {
+            left: mouseX,
+            top: mouseY
+          }
+        });
+      }
     });
-  </script>
+
+    window.addEventListener("mousemove", (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    });
+
+</script>
  
+<script>
+  const buttons = document.querySelectorAll('.button');
+
+buttons.forEach(button => {
+  button.addEventListener('mousemove', function(evt) {
+    const movX = evt.clientX - this.getBoundingClientRect().x;
+    const movY = evt.clientY - this.getBoundingClientRect().y;
+
+    gsap.to(this.querySelector(".button__spotlight"), {
+      x: movX,
+      y: movY,
+      scale: 30,
+      duration: 0.3,
+    });
+  });
+
+  button.addEventListener('mouseleave', function(evt) {
+    const movX = evt.clientX - this.getBoundingClientRect().x;
+    const movY = evt.clientY - this.getBoundingClientRect().y;
+
+    gsap.to(this.querySelector(".button__spotlight"), {
+      x: movX,
+      y: movY,
+      scale: 0,
+      duration: 0.3,
+    });
+  });
+});
+</script>
 
   <script>
     AOS.init({
@@ -523,38 +555,7 @@ requestAnimationFrame(raf)
     requestAnimationFrame(raf);
   </script>
 
-  <script>
-    gsap.registerPlugin(ScrollTrigger);
 
-    function animateCounters() {
-      const counters = document.querySelectorAll('.counter');
-
-      counters.forEach(counter => {
-        const targetValue = +counter.getAttribute('data-target');
-
-        // Reset counter value
-        counter.innerText = '0';
-
-        // Animate the counter value
-        gsap.to(counter, {
-          innerText: targetValue, // Animates the `innerText` property
-          duration: 2, // Animation duration
-          ease: "power1.out", // Smooth easing
-          snap: {
-            innerText: 1
-          }, // Snap to whole numbers
-          scrollTrigger: {
-            trigger: counter, // Trigger on the counter
-            start: "top 90%", // Start when 90% of the counter is in the viewport
-            toggleActions: "play reset play reset" // Refresh animation on re-entry
-          }
-        });
-      });
-    }
-
-    // Initialize the animation
-    document.addEventListener('DOMContentLoaded', animateCounters);
-  </script>
 
   <script>
     $(document).ready(function () {
@@ -713,105 +714,8 @@ requestAnimationFrame(raf)
     });
   </script>
 
-<script>
-  if ($('.reveal').length) {
-        gsap.registerPlugin(ScrollTrigger);
-        let revealContainers = document.querySelectorAll(".reveal");
-        revealContainers.forEach((container) => {
-            let image = container.querySelector("img");
-            let tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: container,
-                    toggleActions: "play none none none"
-                }
-            });
-            tl.set(container, {
-                autoAlpha: 1
-            });
-            tl.from(container, 1, {
-                xPercent: -100,
-                ease: Power2.out
-            });
-            tl.from(image, 1, {
-                xPercent: 100,
-                scale: 1,
-                delay: -1,
-                ease: Power2.out
-            });
-        });
-    }
-</script>
-
-<script>
-  console.clear();
-
-gsap.registerPlugin(ScrollTrigger);
-
-var panels_class = ".main-wrapper__panel";
-
-gsap.set('.first', {autoAlpha:0});
-
-var panels = gsap.utils.toArray(panels_class);
-
-panels.forEach((panel, i) => {
-
-  // Last element
-  if ( i == ($(panels_class).length - 1) ) {
-    console.log(panel);
-    ScrollTrigger.create({
-      trigger: panel,
-      start: "top top",
-      end: "bottom bottom",
-      pin: true,
-      pinSpacing: false,
-      //markers: true,
-    });
-
-    return;
-  }
-
-  ScrollTrigger.create({
-    trigger: panel,
-    start: "top top",
-    end: "bottom top",
-    pin: true,
-    pinSpacing: false,
-    //markers: true
-  });
-
-});
 
 
-var lineAnim = gsap.timeline({
-  scrollTrigger: {
-    trigger: panels[2], 
-    start: "top top", 
-    end: "+=50vh", // end after scrolling 50vh beyond the start
-    // :entering, leaving, backwards, back past the beginning
-    toggleActions: "play none none reset"
-  },
-})
-.to('.first', {autoAlpha:0, duration:0.1})
-.to('.second', {autoAlpha:1, duration:0.1})
-
-</script>
-
-
-
-
-
-
-  <style>
-    .sub-menu {
-      display: none;
-      /* Initially hidden */
-    }
-
-    .sub-menu.active {
-      display: block;
-      /* Show when active class is added */
-    }
-  </style>
 
 </body>
 

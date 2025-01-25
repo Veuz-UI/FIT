@@ -18,6 +18,13 @@
 </head>
 
 <body>
+
+  <!-- body cursor -->
+  <div class="cursor"></div>
+  <div class="cursor2"></div>
+  <!-- body cursor -->
+
+
   <button id="toTopBtn">
     <img src="assets/img/arrow-right.svg" alt="">
   </button> 
@@ -55,62 +62,41 @@
         <div class="nsd-menu-overlay__content flex flex-wrap overflow-hidden nsd-menu-main">
           <div class="nsd-menu-overlay__content_part nsd-menu-overlay__content_part__left menu-ab-custom">
             <ul class="nsd-menu-fullscren">
-              <li class="fullscreen-single__item"><a href="index.html">Home</a></li>
+              <li class="fullscreen-single__item "><a href="index.html" >Home</a></li>
               <li class="fullscreen-single__item"><a href="about.html">About us</a></li>
               <li class="fullscreen-single__item has-sub menu-item-has-children">
-                <a href="#" class="__active">
+                <a href="javascript:void(0)">
                   <span>Services</span> <span class="menu-arrow"><i class="fa-solid fa-chevron-down"></i></span>
                 </a>
                 <ul class="sub-menu">
                   <li class="sub-menu__inner">
-                    <a href="">
-                      <span>submenu-1</span>
+                    <a href="service.html">
+                      <span>Website Development</span>
                     </a>
                   </li>
                   <li class="sub-menu__inner">
-                    <a href="">
-                      <span>submenu-2</span>
+                    <a href="service.html">
+                      <span>Aramco CCC+</span>
                     </a>
                   </li>
                   <li class="sub-menu__inner">
-                    <a href="">
-                      <span>submenu-3</span>
+                    <a href="service.html">
+                      <span>UI/UX Design</span>
                     </a>
                   </li>
                 </ul>
               </li>
-              <li class="fullscreen-single__item has-sub menu-item-has-children">
-                <a href="#">
-                  <span>Products</span><span class="menu-arrow"><i class="fa-solid fa-chevron-down"></i></span>
-                </a>
-                <ul class="sub-menu">
-                  <li class="sub-menu__inner">
-                    <a href="">
-                      <span>submenu-4</span>
-                    </a>
-                  </li>
-                  <li class="sub-menu__inner">
-                    <a href="">
-                      <span>submenu-5</span>
-                    </a>
-                  </li>
-                  <li class="sub-menu__inner">
-                    <a href="">
-                      <span>submenu-6</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="fullscreen-single__item"><a href="">Contacts</a></li>
+              <li class="fullscreen-single__item"><a href="contact.html">Contacts</a></li>
             </ul>
 
             <div class="sm-show-btn">
               <div class="main-button">
                 <div class="main-button">
-                  <a href="#" class="button">
+                  <a href="enquiry.html" class="button">
                     <span class="button__spotlight"></span>
                     <span class="button__wrapper">
-                      <span class="button__text">Request a Quote <img src="assets/img/arrow-right.svg" alt="" class="button-arrow"></span>
+                      <span class="button__text">Request a Quote <img src="assets/img/arrow-right.svg" alt=""
+                          class="button-arrow"></span>
                     </span>
                   </a>
                 </div>
@@ -142,10 +128,11 @@
               </div>
 
               <div class="main-button">
-                <a href="#" class="button">
+                <a href="enquiry.html" class="button">
                   <span class="button__spotlight"></span>
                   <span class="button__wrapper">
-                    <span class="button__text">Request a Quote <img src="assets/img/arrow-right.svg" alt="" class="button-arrow"></span>
+                    <span class="button__text">Request a Quote <img src="assets/img/arrow-right.svg" alt=""
+                        class="button-arrow"></span>
                   </span>
                 </a>
               </div>
@@ -183,12 +170,12 @@
       <div class="enquiry-main-div">
         <div class="section-title">
           <h4>get in touch</h4>
-          <h2 class="reveal-type" data-bg-color="#ffffff1c" data-fg-color="#fff">Let's work together to create the life and business
+          <h2 class="reveal-type" data-bg-color="#ffffff1c" data-fg-color="#fff">Let's work together to create <br> the life  and business
           </h2>
         </div>
         <form id="contactForm" action="#" method="POST" data-toggle="validator"  novalidate="true">
           <div class="row">
-              <div class="form-group col-md-6 mb-4">
+              <div class="form-group col-md-6 mb-4" data-aos="fade-up" data-aos-duration="1500">
                   <div class="input-container">
                       <input placeholder="Your Name" class="input-field" type="text" id="name">
                       <label for="input-field" class="input-label">Your Name</label>
@@ -197,7 +184,7 @@
                     </div>
               </div>
 
-              <div class="form-group col-md-6 mb-4">
+              <div class="form-group col-md-6 mb-4" data-aos="fade-up" data-aos-duration="1500">
                   <div class="input-container">
                       <input placeholder="Enter Email" class="input-field" type="email" id="email">
                       <label for="input-field" class="input-label">Enter Email</label>
@@ -206,7 +193,7 @@
                     </div>
               </div>
 
-              <div class="form-group col-md-6 mb-4">
+              <div class="form-group col-md-6 mb-4" data-aos="fade-up" data-aos-duration="1500">
                   <div class="input-container">
                       <input placeholder="Enter Phone Number" class="input-field" type="number" id="phone">
                       <label for="input-field" class="input-label">Enter Phone Number</label>
@@ -215,7 +202,7 @@
                     </div>
               </div>
 
-              <div class="form-group col-md-6 mb-4">
+              <div class="form-group col-md-6 mb-4" data-aos="fade-up" data-aos-duration="1500">
                   <div class="input-container">
                       <select placeholder="Select Country" name="" class="input-field" type="number" id="phone">
                           <option value="volvo" style="display: none;">Select Country</option>
@@ -228,26 +215,130 @@
                       <div class="help-block with-errors"></div>
                     </div>
               </div>
-                  <h3 class="about-project">TELL US ABOUT YOUR PROJECT</h3>
-              <div class="form-group col-md-12 mb-5">
+
+
+                  <div data-aos="fade-up" data-aos-duration="1500">
+                    <h3 class="about-project">TELL US ABOUT YOUR PROJECT</h3>
+              <div class="form-group col-md-12 mb-2">
                   <textarea name="message" class="form-control" id="message" rows="4" placeholder="What’s your project all about? "></textarea>
                   <div class="help-block with-errors"></div>
               </div>
-
-
-              <h3 class="about-project">What Are You Looking For? *</h3>
-                  <div class="check-content">
-                      <label class="checkBox">
-                        <input type="checkbox" id="ch1" />
-                        <div class="transition"></div>
-                      </label>
-                      <label for="ch1">Website Development</label>
-                    </div>
-              <div class="col-lg-12">
-                  <div class="contact-form-btn">
-                      <button type="submit" class="btn-default disabled">submit message</button>
-                      <div id="msgSubmit" class="h3 hidden"></div>
                   </div>
+
+
+              <h3 class="about-project" data-aos="fade-up" data-aos-duration="1500">What Are You Looking For? *</h3>
+
+              <div class="row">
+                <div class="col-lg-4" data-aos="fade-up" data-aos-duration="1500">
+                  <label class="material-checkbox">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>  
+                      Website Development
+                  </label>
+
+                  <label class="material-checkbox">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    Mobile Application Development
+                  </label>
+
+                  <label class="material-checkbox">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    E-Commerce Developmen
+                  </label>
+
+                  <label class="material-checkbox">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    Custom Software Development
+                  </label>
+
+                  <label class="material-checkbox">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>     
+                    Salesforce Cloud
+                  </label>
+
+                  <label class="material-checkbox">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>         
+                      Oracle EBS
+                  </label>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-duration="1500">
+                  <label class="material-checkbox">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>  
+                    ZATCA E-Invoicing
+                  </label>
+
+                  <label class="material-checkbox">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>   
+                    ARAMCO CCC/CCC+
+                  </label>
+
+                  <label class="material-checkbox">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>       
+                        Cyber Security
+                  </label>
+
+                  <label class="material-checkbox">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>                 
+                        Odoo ERP
+                  </label>
+
+                  <label class="material-checkbox">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>     
+                    Email Hosting
+                  </label>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-duration="1500">
+                  <label class="material-checkbox">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>  
+                    Digital Marketing
+                  </label>
+
+                  <label class="material-checkbox">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    Branding & Design
+                  </label>
+
+                  <label class="material-checkbox">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    Industrial Training
+                  </label>
+
+                  <label class="material-checkbox">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    Website Hosting
+                  </label>
+
+                  <label class="material-checkbox">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>     
+                    Endpoint Security
+                  </label>
+                </div>
+              </div>
+                
+              <div class="col-lg-12 d-flex justify-content-md-center justify-content-start mt-2" data-aos="fade-up" data-aos-duration="1500">
+                <div class="main-button">
+                  <a href="#" class="button">
+                    <span class="button__spotlight"></span>
+                    <span class="button__wrapper">
+                      <span class="button__text">Submit<img src="assets/img/arrow-right.svg" alt="" class="button-arrow"></span>
+                    </span>
+                  </a>
+                </div>
               </div>
           </div>
       </form>
@@ -362,7 +453,7 @@
 
 
   <script src="assets/js/animation.js"></script>
-  <script src="assets/js/script.js"></script>
+  <!-- <script src="assets/js/script.js"></script> -->
   <script src="assets/js/aos.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
   <script src="assets/js/jquery.min.js"></script>
@@ -375,21 +466,39 @@
   <script src="assets/js/ScrollTrigger.min.js"></script>
   <script src="assets/js/split-type.js"></script>
 
-  <script>
-    gsap.registerPlugin(ScrollTrigger);
 
-    gsap.to("#rotatingImage", {
-      scrollTrigger: {
-        trigger: ".image-container",
-        start: "top center",
-        end: "bottom center",
-        scrub: true,
-      },
-      rotation: 1080,
-      ease: "linear",
+  <script>
+    let cursor = document.querySelector(".cursor");
+let cursor2 = document.querySelector(".cursor2");
+let cursorScale = document.querySelectorAll(".cursor-scale");
+let mouseX = 0;
+let mouseY = 0;
+
+gsap.to({}, 0.016, {
+  repeat: -1,
+  onRepeat: function () {
+    gsap.set(cursor, {
+      css: {
+        left: mouseX,
+        top: mouseY
+      }
     });
-  </script>
- 
+    gsap.set(cursor2, {
+      css: {
+        left: mouseX,
+        top: mouseY
+      }
+    });
+  }
+});
+
+window.addEventListener("mousemove", (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+});
+
+</script>
+
 
   <script>
     AOS.init({
@@ -397,8 +506,6 @@
     });
   </script>
 
-
- 
 
   <script>
    
@@ -466,38 +573,7 @@ requestAnimationFrame(raf)
     requestAnimationFrame(raf);
   </script>
 
-  <script>
-    gsap.registerPlugin(ScrollTrigger);
 
-    function animateCounters() {
-      const counters = document.querySelectorAll('.counter');
-
-      counters.forEach(counter => {
-        const targetValue = +counter.getAttribute('data-target');
-
-        // Reset counter value
-        counter.innerText = '0';
-
-        // Animate the counter value
-        gsap.to(counter, {
-          innerText: targetValue, // Animates the `innerText` property
-          duration: 2, // Animation duration
-          ease: "power1.out", // Smooth easing
-          snap: {
-            innerText: 1
-          }, // Snap to whole numbers
-          scrollTrigger: {
-            trigger: counter, // Trigger on the counter
-            start: "top 90%", // Start when 90% of the counter is in the viewport
-            toggleActions: "play reset play reset" // Refresh animation on re-entry
-          }
-        });
-      });
-    }
-
-    // Initialize the animation
-    document.addEventListener('DOMContentLoaded', animateCounters);
-  </script>
 
   <script>
     $(document).ready(function () {
@@ -685,76 +761,10 @@ requestAnimationFrame(raf)
     }
 </script>
 
-<script>
-  console.clear();
-
-gsap.registerPlugin(ScrollTrigger);
-
-var panels_class = ".main-wrapper__panel";
-
-gsap.set('.first', {autoAlpha:0});
-
-var panels = gsap.utils.toArray(panels_class);
-
-panels.forEach((panel, i) => {
-
-  // Last element
-  if ( i == ($(panels_class).length - 1) ) {
-    console.log(panel);
-    ScrollTrigger.create({
-      trigger: panel,
-      start: "top top",
-      end: "bottom bottom",
-      pin: true,
-      pinSpacing: false,
-      //markers: true,
-    });
-
-    return;
-  }
-
-  ScrollTrigger.create({
-    trigger: panel,
-    start: "top top",
-    end: "bottom top",
-    pin: true,
-    pinSpacing: false,
-    //markers: true
-  });
-
-});
-
-
-var lineAnim = gsap.timeline({
-  scrollTrigger: {
-    trigger: panels[2], 
-    start: "top top", 
-    end: "+=50vh", // end after scrolling 50vh beyond the start
-    // :entering, leaving, backwards, back past the beginning
-    toggleActions: "play none none reset"
-  },
-})
-.to('.first', {autoAlpha:0, duration:0.1})
-.to('.second', {autoAlpha:1, duration:0.1})
-
-</script>
 
 
 
 
-
-
-  <style>
-    .sub-menu {
-      display: none;
-      /* Initially hidden */
-    }
-
-    .sub-menu.active {
-      display: block;
-      /* Show when active class is added */
-    }
-  </style>
 
 </body>
 
