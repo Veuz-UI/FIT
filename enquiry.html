@@ -498,6 +498,18 @@ window.addEventListener("mousemove", (e) => {
 
 </script>
 
+<script>
+  const navbar = document.getElementById('navbar');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+</script>
+
 
   <script>
     AOS.init({
@@ -732,32 +744,33 @@ requestAnimationFrame(raf)
   </script>
 
 <script>
-  if ($('.reveal').length) {
-        gsap.registerPlugin(ScrollTrigger);
-        let revealContainers = document.querySelectorAll(".reveal");
-        revealContainers.forEach((container) => {
-            let image = container.querySelector("img");
-            let tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: container,
-                    toggleActions: "play none none none"
-                }
-            });
-            tl.set(container, {
-                autoAlpha: 1
-            });
-            tl.from(container, 1, {
-                xPercent: -100,
-                ease: Power2.out
-            });
-            tl.from(image, 1, {
-                xPercent: 100,
-                scale: 1,
-                delay: -1,
-                ease: Power2.out
-            });
-        });
-    }
+  const buttons = document.querySelectorAll('.button');
+
+buttons.forEach(button => {
+  button.addEventListener('mousemove', function(evt) {
+    const movX = evt.clientX - this.getBoundingClientRect().x;
+    const movY = evt.clientY - this.getBoundingClientRect().y;
+
+    gsap.to(this.querySelector(".button__spotlight"), {
+      x: movX,
+      y: movY,
+      scale: 30,
+      duration: 0.3,
+    });
+  });
+
+  button.addEventListener('mouseleave', function(evt) {
+    const movX = evt.clientX - this.getBoundingClientRect().x;
+    const movY = evt.clientY - this.getBoundingClientRect().y;
+
+    gsap.to(this.querySelector(".button__spotlight"), {
+      x: movX,
+      y: movY,
+      scale: 0,
+      duration: 0.3,
+    });
+  });
+});
 </script>
 
 

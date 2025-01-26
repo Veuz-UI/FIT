@@ -923,66 +923,6 @@ buttons.forEach(button => {
     }
   </script>
 
-  <script>
-    console.clear();
-
-    gsap.registerPlugin(ScrollTrigger);
-
-    var panels_class = ".main-wrapper__panel";
-
-    gsap.set('.first', {
-      autoAlpha: 0
-    });
-
-    var panels = gsap.utils.toArray(panels_class);
-
-    panels.forEach((panel, i) => {
-
-      // Last element
-      if (i == ($(panels_class).length - 1)) {
-        console.log(panel);
-        ScrollTrigger.create({
-          trigger: panel,
-          start: "top top",
-          end: "bottom bottom",
-          pin: true,
-          pinSpacing: false,
-          //markers: true,
-        });
-
-        return;
-      }
-
-      ScrollTrigger.create({
-        trigger: panel,
-        start: "top top",
-        end: "bottom top",
-        pin: true,
-        pinSpacing: false,
-        //markers: true
-      });
-
-    });
-
-
-    var lineAnim = gsap.timeline({
-        scrollTrigger: {
-          trigger: panels[2],
-          start: "top top",
-          end: "+=50vh", // end after scrolling 50vh beyond the start
-          // :entering, leaving, backwards, back past the beginning
-          toggleActions: "play none none reset"
-        },
-      })
-      .to('.first', {
-        autoAlpha: 0,
-        duration: 0.1
-      })
-      .to('.second', {
-        autoAlpha: 1,
-        duration: 0.1
-      })
-  </script>
 
   <!-- marquee -->
   <script>

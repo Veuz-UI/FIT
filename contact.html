@@ -181,7 +181,7 @@
       </div>
 
       <div class="row ">
-        <div class="col-lg-4">
+        <div class="col-lg-4" data-aos="fade-up" data-aos-duration="3000">
           <div class="adrss-boxes">
             <h3>New Enquiry</h3>
             <p class="main-para">Speak To A Member Of Our Sales Teams</p>
@@ -202,7 +202,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-8">
+        <div class="col-lg-8" data-aos="fade-up" data-aos-duration="3000">
           <div class="adrss-boxes">
             <h3>New Enquiry</h3>
             <p class="main-para">Speak To A Member Of Our Sales Teams</p>
@@ -284,7 +284,7 @@
     </div>
   </section>
 
-  <div class="google-map ">
+  <div class="google-map" data-aos="fade-up" data-aos-duration="3000">
     <div class="container-flude">
         <div class="row no-gutters">
             <div class="col-lg-12">
@@ -485,6 +485,17 @@ buttons.forEach(button => {
     });
   </script>
 
+<script>
+  const navbar = document.getElementById('navbar');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+</script>
 
  
 

@@ -174,7 +174,7 @@
           </div>
           <div class="mission-vision-list">
             <div class="row">
-              <div class="col-md-6 col-12">
+              <div class="col-md-6 col-12" data-aos="fade-up" data-aos-duration="3000">
                 <!-- Mission Vision Item Start -->
                 <div class="mission-vision-item">
                   <div class="icon-box">
@@ -191,7 +191,7 @@
                 <!-- Mission Vision Item End -->
               </div>
 
-              <div class="col-md-6 col-12">
+              <div class="col-md-6 col-12" data-aos="fade-up" data-aos-duration="3000">
                 <!-- Mission Vision Item Start -->
                 <div class="mission-vision-item ">
                   <div class="icon-box">
@@ -297,7 +297,7 @@
   <div class="company-experience bg-section">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-lg-5">
+        <div class="col-lg-5" data-aos="fade-right" data-aos-duration="3000">
           <!-- Company Experience Content Start -->
           <div class="company-experience-content">
             <!-- Section Title Start -->
@@ -315,7 +315,7 @@
           <!-- Company Experience Content End -->
         </div>
 
-        <div class="col-lg-7">
+        <div class="col-lg-7" data-aos="fade-left" data-aos-duration="3000">
           <!-- Company Experience List Start -->
 
           <p class="main-para">We accelerate the development of innovative programs for companies of all sizes, thanks
@@ -863,66 +863,6 @@
     }
   </script>
 
-  <script>
-    console.clear();
-
-    gsap.registerPlugin(ScrollTrigger);
-
-    var panels_class = ".main-wrapper__panel";
-
-    gsap.set('.first', {
-      autoAlpha: 0
-    });
-
-    var panels = gsap.utils.toArray(panels_class);
-
-    panels.forEach((panel, i) => {
-
-      // Last element
-      if (i == ($(panels_class).length - 1)) {
-        console.log(panel);
-        ScrollTrigger.create({
-          trigger: panel,
-          start: "top top",
-          end: "bottom bottom",
-          pin: true,
-          pinSpacing: false,
-          //markers: true,
-        });
-
-        return;
-      }
-
-      ScrollTrigger.create({
-        trigger: panel,
-        start: "top top",
-        end: "bottom top",
-        pin: true,
-        pinSpacing: false,
-        //markers: true
-      });
-
-    });
-
-
-    var lineAnim = gsap.timeline({
-        scrollTrigger: {
-          trigger: panels[2],
-          start: "top top",
-          end: "+=50vh", // end after scrolling 50vh beyond the start
-          // :entering, leaving, backwards, back past the beginning
-          toggleActions: "play none none reset"
-        },
-      })
-      .to('.first', {
-        autoAlpha: 0,
-        duration: 0.1
-      })
-      .to('.second', {
-        autoAlpha: 1,
-        duration: 0.1
-      })
-  </script>
 
 
 </body>

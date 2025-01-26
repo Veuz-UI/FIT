@@ -2878,7 +2878,19 @@ input[type="number"] {
         padding: 30px 10px;
     }
 
-	/* addjust */
+	.contact-info-title h3{
+		font-size: 15px;
+	}
+	.contact-main {
+		padding: 40px 0px;
+	}
+	.main-button .button__text{
+		font-size: 14px;
+	}
+	.main-button .button__wrapper {
+		padding: 0px 20px;
+		height: 40px;
+	}
 
 }
 
