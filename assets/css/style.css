@@ -2865,6 +2865,7 @@ input[type="number"] {
 
 	.sm-show-btn {
 		display: block !important;
+		margin-top: 20px;
 	}
 
 	.loader-wrap .loader-wrap-heading .load-text {
