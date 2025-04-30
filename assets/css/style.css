@@ -21,7 +21,7 @@ html {
 
 body {
 	font-family: var(--main-font) !important;
-	overflow-x: hidden !important;
+	overflow-x: clip !important;
 	background-color: var(--body-color);
 }
 
@@ -1404,7 +1404,7 @@ img {
 
 .footer-para {
 	font-size: 15px;
-	color: #A1AAC9;
+	color: var(--para-color);
 	font-weight: 300;
 }
 
@@ -1439,6 +1439,7 @@ img {
 	margin-bottom: 10px;
 	font-weight: 300;
 	position: relative;
+	width: fit-content;
 }
 
 .footer-links li::before {
@@ -1997,7 +1998,7 @@ body.loaded {
 }
 
 .bs-slider .item {
-	min-height: 250px;
+	min-height: 330px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -3022,4 +3023,206 @@ input[type="number"] {
 	pointer-events: none;
 	z-index: 9999;
   }
+
+
+  /* <!-- ==================== Portfolio ==================== --> */
+  
+
+
+  /* Portfolio Slider Styles */
+.portfolio-slider {
+	position: relative;
+	height: 100vh;
+	overflow: hidden;
+  }
+  
+  .slider-container {
+	position: relative;
+	height: 100%;
+  }
+  
+  .slider-track {
+	display: flex;
+	position: absolute;
+	top: 60px;
+	left: 0;
+	gap: 4rem;
+	padding: 2rem;
+  }
+  
+  .slider-item {
+	position: relative;
+	width: 100%;
+	height: 600px;
+	overflow: hidden;
+	border-radius: 20px;
+  }
+  
+  .slider-item img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 0.5s ease;
+  }
+  
+  .item-content {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 2rem;
+	background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+	color: white;
+	transform: translateY(100%);
+	transition: transform 0.5s ease;
+  }
+  
+  .slider-item:hover img {
+	transform: scale(1.05);
+  }
+  
+  .slider-item:hover .item-content {
+	transform: translateY(0);
+  }
+
+  .portfolio-head{
+	padding-top: 80px;
+  }
+
+  .slider-item .item-content h3{
+	font-size: 30px;
+	font-weight: 700;
+  }
+
+  .slider-item .item-content p{
+	color: var(--primary-color);
+  }
+
+  
+  /* <!-- ==================== products ==================== --> */
+
+  .product-section{
+	padding: 70px 0px;
+  }
+
+  .product-img{
+	height: 400px;
+	width: 100%;
+	border-radius: 10px;
+	overflow: hidden;
+	margin: 30px 0px;
+  }
+
+  .product-img img{
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+  }
+
+  .tow-phase-div{
+	height: 100%;
+	width: 100%;
+  }
+
+  .tow-phase-div img{
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+  }
+
+  .tow-phase{
+	background: #222121;
+	padding: 50px;
+  }
+
+  .tow-phase{
+	text-align: left;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .tow-phase p{
+	font-size: 15px;
+	font-weight: 300;
+	color: var(--para-color);
+  }
+
+  .tow-phase h4{
+	font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  .panel.align-top {
+	align-items: flex-start;
+  }
+  
+  .panel h1 {
+	font-size: 1.8em;
+	color: white;
+	font-weight: 300;
+	margin: 0 auto;
+  }
+  
+  .panel.description {
+	padding-bottom: 60px;
+  }
+  
+  
+  .panel {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 600;
+	font-size: 1.5em;
+	text-align: center;
+	color: white;
+	position: relative;
+	box-sizing: border-box;
+	padding: 10px;
+  }
+
+  /* SCROLL DOWN */
+  
+  .panel-main {
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	overflow: hidden;
+  }
+  
+  .panel {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+  }
+  
+  .panel:not(:first-child) {
+	opacity: 0;
+	visibility: hidden;
+	transform: scale(0.8);
+  }
+  
+  .blank {
+	height: 100vh;
+	background-color: black;
+  }
+  
+  .spacer {
+	width: 100%;
+	height: 100vh;
+	background: coral;
+  }
+  
+  .multitude-features{
+	text-align: center;
+  }
+
   
