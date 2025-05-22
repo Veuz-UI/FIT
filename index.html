@@ -22,6 +22,56 @@
 
 
   <style>
+    .counter-input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 5px;
+  border-radius: 8px;
+  width: fit-content;
+}
+
+.counter-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.counter-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+.counter-btn:active {
+  transform: scale(0.95);
+}
+
+.counter-input {
+  width: 60px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  outline: none;
+}
+
+.counter-input::-webkit-inner-spin-button,
+.counter-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+  </style>
+
+  <style>
 
     html, body {
   touch-action: manipulation;
@@ -275,7 +325,11 @@
   </div>
   <!-- banner end -->
 
-
+<div class="counter-input-wrapper">
+  <button class="counter-btn minus">-</button>
+  <input type="number" class="counter-input" value="0" min="0" max="100">
+  <button class="counter-btn plus">+</button>
+</div>
 
   <section class="about">
     <!-- marquee -->
@@ -874,6 +928,80 @@
 });   
   </script>
 
+
+
+<script>
+  // Counter Input Animation
+document.addEventListener('DOMContentLoaded', () => {
+  const counterWrappers = document.querySelectorAll('.counter-input-wrapper');
+
+  counterWrappers.forEach(wrapper => {
+    const minusBtn = wrapper.querySelector('.minus');
+    const plusBtn = wrapper.querySelector('.plus');
+    const input = wrapper.querySelector('.counter-input');
+    
+    let value = parseInt(input.value);
+    const min = parseInt(input.getAttribute('min')) || 0;
+    const max = parseInt(input.getAttribute('max')) || 100;
+    const step = parseInt(input.getAttribute('step')) || 1;
+
+    // Animate value change
+    const animateValue = (start, end, duration) => {
+      let startTimestamp = null;
+      const step = (timestamp) => {
+        if (!startTimestamp) startTimestamp = timestamp;
+        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+        const currentValue = Math.floor(progress * (end - start) + start);
+        input.value = currentValue;
+        if (progress < 1) {
+          window.requestAnimationFrame(step);
+        }
+      };
+      window.requestAnimationFrame(step);
+    };
+
+    // Plus button click
+    plusBtn.addEventListener('click', () => {
+      if (value < max) {
+        const startValue = value;
+        value = Math.min(value + step, max);
+        animateValue(startValue, value, 200);
+        
+        // Add button press animation
+        gsap.to(plusBtn, {
+          scale: 0.95,
+          duration: 0.1,
+          yoyo: true,
+          repeat: 1
+        });
+      }
+    });
+
+    // Minus button click
+    minusBtn.addEventListener('click', () => {
+      if (value > min) {
+        const startValue = value;
+        value = Math.max(value - step, min);
+        animateValue(startValue, value, 200);
+        
+        // Add button press animation
+        gsap.to(minusBtn, {
+          scale: 0.95,
+          duration: 0.1,
+          yoyo: true,
+          repeat: 1
+        });
+      }
+    });
+
+    // Input direct change
+    input.addEventListener('change', () => {
+      value = Math.min(Math.max(parseInt(input.value) || 0, min), max);
+      input.value = value;
+    });
+  });
+});
+</script>
 </body>
 
 </html>
