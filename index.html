@@ -77,7 +77,7 @@
         <span>I</span>
         <span>O</span>
         <span>N</span>
-        <span>Sbchhchbc</span>
+        <span>S</span>
       </div>
     </div>
   </div>
@@ -858,6 +858,20 @@
       }, 600); // Matches the transition duration
     }, 4000); // Interval time between words
   });
+  </script>
+
+  <script>
+    document.addEventListener('touchmove', function (e) {
+  if (e.scale !== 1) {
+    e.preventDefault();
+  }
+}, { passive: false });
+  </script>
+
+  <script>
+    document.addEventListener('gesturestart', function (e) {
+  e.preventDefault();
+});   
   </script>
 
 </body>
